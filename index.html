@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Quiz</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div id="app" class="quiz-style">
+
+      <div v-for="category in catogoriesList">
+        <p class="cat-style">{{category}}</p>
+      </div>
+      <h3>Pick a category above that interests you and add its ID to get the related questions!</h3>
+      <form v-on:submit.prevent=getQuestions>
+        <div>
+          <label> Type in your category ID here</label> 
+          <input v-model="defaultCategory">
+        </div>
+        <button type="Submit"> Submit</button>
+        
+        <streaming-quiz v-bind:quiz="someQuestion" v-for="someQuestion in questions" v-bind:class="['cats']">
+        </streaming-quiz>
+
+      </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
+

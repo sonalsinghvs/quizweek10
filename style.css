@@ -1,0 +1,29 @@
+html{
+    font-family: 'Open Sans', sans-serif;
+}
+
+.quiz-style{
+    width:100%;
+    color: #4B82A6;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+h3{
+    font-size: larger ;
+}
+.cats {
+    width: 90%;
+    color: #4B82A6;
+    border-radius: 4px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 30px auto;
+    overflow: hidden;
+    background: #DBE7EF;
+    box-shadow: 5px 10px 18px #888888;
+    
+}
